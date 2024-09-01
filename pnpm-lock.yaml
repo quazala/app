@@ -8,15 +8,21 @@ importers:
 
   .:
     dependencies:
-      mime:
-        specifier: ^4.0.4
-        version: 4.0.4
-      ws:
-        specifier: ^8.18.0
-        version: 8.18.0
-      zod:
-        specifier: ^3.23.8
-        version: 3.23.8
+      '@quazala/env-reader':
+        specifier: ^0.0.1
+        version: 0.0.1
+      '@quazala/file-structure-reader':
+        specifier: ^0.0.1
+        version: 0.0.1
+      '@quazala/router':
+        specifier: ^0.0.1
+        version: 0.0.1
+      '@quazala/schema-validator':
+        specifier: ^0.0.1
+        version: 0.0.1
+      '@quazala/server':
+        specifier: ^0.0.3
+        version: 0.0.3
     devDependencies:
       '@biomejs/biome':
         specifier: 1.8.3
@@ -236,6 +242,26 @@ packages:
 
   '@jridgewell/sourcemap-codec@1.5.0':
     resolution: {integrity: sha512-gv3ZRaISU3fjPAgNsriBRqGWQL6quFx04YMPW/zD8XMLsU32mhCCbfbO6KZFLjvYpCZ8zyDEgqsgf+PwPaM7GQ==}
+
+  '@quazala/env-reader@0.0.1':
+    resolution: {integrity: sha512-soRttL/4KWY+JTJMIYRCW2RX2vK1NdYo9p92tdrHgxI6dmhYUZjkcQB4S+xdBen45i62SVCW0PYOB9hj9wJQbg==}
+    engines: {node: '>=16'}
+
+  '@quazala/file-structure-reader@0.0.1':
+    resolution: {integrity: sha512-yQRtE/4mEfa4nPeu7GvRn9gwf9ObEGC6UVcWRhTX4diOGXaQsJlOy5/etzAAaevVzJBBL+lzGcMelq7WvCVY6g==}
+    engines: {node: '>=16'}
+
+  '@quazala/router@0.0.1':
+    resolution: {integrity: sha512-3DsBTR//wXABXFa7u2gowaYkiVcCVNPNAoRJShDh2+I71Z7aQHOYr1sPdupCu+XF6ViJSb5Vum6W4vjnuXoVNQ==}
+    engines: {node: '>=16'}
+
+  '@quazala/schema-validator@0.0.1':
+    resolution: {integrity: sha512-0d3+Z5Yya67zVevgOguXmFe4loPzfnhAO9D5fypQ19CheDTWH7k2GDyFWG0F3ME2tiJFLOVdswvF5kzDAwbPzg==}
+    engines: {node: '>=16'}
+
+  '@quazala/server@0.0.3':
+    resolution: {integrity: sha512-MwPmCORiPfO+YEfvyELfBM8aax+6Y68ef97b73ae+8lgN8COZQcxEXuT2ysQhvvRbTNHd3X0pH26l0LXcInk6A==}
+    engines: {node: '>=16'}
 
   '@rollup/rollup-android-arm-eabi@4.21.0':
     resolution: {integrity: sha512-WTWD8PfoSAJ+qL87lE7votj3syLavxunWhzCnx3XFxFiI/BA/r3X7MUM8dVrH8rb2r4AiO8jJsr3ZjdaftmnfA==}
@@ -824,6 +850,27 @@ snapshots:
       '@sinclair/typebox': 0.27.8
 
   '@jridgewell/sourcemap-codec@1.5.0': {}
+
+  '@quazala/env-reader@0.0.1':
+    dependencies:
+      zod: 3.23.8
+
+  '@quazala/file-structure-reader@0.0.1': {}
+
+  '@quazala/router@0.0.1': {}
+
+  '@quazala/schema-validator@0.0.1':
+    dependencies:
+      zod: 3.23.8
+
+  '@quazala/server@0.0.3':
+    dependencies:
+      mime: 4.0.4
+      ws: 8.18.0
+      zod: 3.23.8
+    transitivePeerDependencies:
+      - bufferutil
+      - utf-8-validate
 
   '@rollup/rollup-android-arm-eabi@4.21.0':
     optional: true
